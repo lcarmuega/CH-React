@@ -31,3 +31,11 @@
     font-family: 'Roboto Mono', monospace;
     user-select: none;
 }
+
+.counterButton {
+    user-select: none;
+    background-color: white;
+    font-family: 'Roboto Mono', monospace;
+    margin: 8px;
+    border-radius: 5px;
+}

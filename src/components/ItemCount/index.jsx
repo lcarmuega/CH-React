@@ -1,35 +1,43 @@
 import React, { useState } from 'react';
 import './styles.css';
 
-const ItemCount = () => {
+const ItemCount = ({ valorStock }) => {
     const [quantity, setQuantity] = useState(1);
-    const [stock, setStock] = useState(8);
+    const [stock, setStock] = useState(valorStock);
 
     const addItem = () => {
-        if(quantity < stock){
-            setQuantity(quantity + 1);
-        } else {
-            alert("No hay stock disponible!");
-        }
+        setQuantity(quantity + 1);
     }
 
     const removeItem = () => {
-        if(quantity > 1){
+        if (quantity > 1) {
             setQuantity(quantity - 1);
+        }
+    }
+
+    const addToCart = () => {
+        if (quantity <= stock) {
+            alert("Se agregaron los productos al carrito");
+            setStock(stock - quantity);
+            setQuantity(1);
         } else {
-            alert("No se puede restar otro item");
+            alert("No hay stock disponible para agregar los productos al carrito");
+            setQuantity(1);
         }
     }
 
     return (
-        <div className="counterContainer">
-            <h6 className="itemTitle">Producto</h6>
-            <div className="quantityContainer">
-                <span className="counterIcon" style={{color: "red"}} onClick={removeItem}>-</span>
-                <span className="itemQuantity">{quantity}</span>
-                <span className="counterIcon" style={{color: "green"}}  onClick={addItem}>+</span>
+        <>
+            <div className="counterContainer">
+                <h6 className="itemTitle">Producto</h6>
+                <div className="quantityContainer">
+                    <span className="counterIcon" style={{ color: "red" }} onClick={removeItem}>-</span>
+                    <span className="itemQuantity">{quantity}</span>
+                    <span className="counterIcon" style={{ color: "green" }} onClick={addItem}>+</span>
+                </div>
+                <button className="counterButton" onClick={addToCart}>Agregar al carrito</button>
             </div>
-        </div>
+        </>
     )
 }
 
