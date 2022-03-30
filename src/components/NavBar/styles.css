@@ -1,0 +1,21 @@
+.container {
+    height: 100px;
+    background-color: #3d3a4b;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.container * {
+    margin: 30px;
+    margin-right: 150px;
+}
+
+h4 {
+    color: #E3DFFF;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.logo {
+    height: 60px;
+}

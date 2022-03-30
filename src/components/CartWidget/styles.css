@@ -1,0 +1,17 @@
+.cart-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    margin: 0px;
+}
+
+.cart-img {
+    height: 45px;
+}
+
+.cart-quantity {
+    margin-left: -120px;
+    color: #E3DFFF;
+    font-family: 'Roboto Mono', monospace;
+}

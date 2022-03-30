@@ -1,0 +1,5 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Dice que el ancho del borde esta incluido en las medidas de las "cajas" */
+}
