@@ -1,0 +1,25 @@
+.productContainer {
+    background-color: rgb(204, 199, 199);
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+}
+
+.productImage {
+    width: 150px;
+}
+
+.productPrice {
+    font-family: 'Roboto Mono', monospace;
+    font-size: medium;
+    margin: 10px;
+}
+
+.productTitle {
+    font-family: 'Roboto Mono', monospace;
+    font-size: large;
+    margin: 10px;
+    text-align: center;
+}

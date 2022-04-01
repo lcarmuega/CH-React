@@ -1,12 +1,32 @@
-import React from 'react';
-import ItemCount from '../ItemCount';
+import React, { useState, useEffect } from 'react';
+import ItemList from '../ItemList';
 import './styles.css';
 
-const ItemListContainer = ({ greeting }) => {
+const ItemListContainer = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+
+      const promesa = new Promise((acc, rej) => {
+        const response = fetch('/data.json');
+        setTimeout(() => {
+          acc(response);
+        }, 2000)
+      })
+      try {
+        const respuesta = await promesa;
+        const data = await respuesta.json();
+        setProducts(data.products);
+      } catch (error) {
+        console.log(error);
+      }
+    })()
+  }, [])
+
   return (
     <>
-      <div className="greeting">{greeting}</div>
-      <ItemCount valorStock="8" />
+      <ItemList items={products} />
     </>
   )
 }
