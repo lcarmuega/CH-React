@@ -4,19 +4,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 15px;
 }
 
 .quantityContainer {
     display: flex;
     align-items: center;
-}
-
-.itemTitle {
-    color: black;
-    font-family: 'Roboto Mono', monospace;
-    font-size: medium;
-    margin-top: 5px;
 }
 
 .counterIcon {

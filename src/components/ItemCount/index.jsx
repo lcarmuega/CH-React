@@ -29,7 +29,6 @@ const ItemCount = ({ valorStock }) => {
     return (
         <>
             <div className="counterContainer">
-                <h6 className="itemTitle">Producto</h6>
                 <div className="quantityContainer">
                     <span className="counterIcon" style={{ color: "red" }} onClick={removeItem}>-</span>
                     <span className="itemQuantity">{quantity}</span>
