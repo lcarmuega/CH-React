@@ -16,6 +16,8 @@
     font-size: medium;
     margin: 10px;
     user-select: none;
+    background-color: rgb(204, 199, 199);
+    border: none;
 }
 
 .itemQuantity {
