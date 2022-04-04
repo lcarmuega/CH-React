@@ -1,0 +1,27 @@
+.mainContainer {
+    display: flex;
+    flex-direction: row;
+    margin: 30px;
+    margin-left: 60px;
+}
+
+.productImage {
+    margin-right: 25px;
+}
+
+.productTitle {
+    font-family: 'Roboto Mono', monospace;
+    font-size: xx-large;
+    margin-bottom: 10px;
+}
+
+.productPrice {
+    font-family: 'Roboto Mono', monospace;
+    font-size: larger;
+    margin-bottom: 10px;
+}
+
+.productDescription {
+    font-family: 'Roboto Mono', monospace;
+    font-size: medium;
+}
