@@ -5,34 +5,63 @@
         "title": "The Song of Achilles",
         "price": 2500,
         "pictureUrl": "../../assets/book-example.jpg",
-        "stock": 8
+        "stock": 8,
+        "category": "Fiction"
     },
     {
         "id": 2,
-        "title": "The Song of Achilles",
+        "title": "One of Us",
         "price": 4500,
-        "pictureUrl": "../../assets/book-example.jpg",
-        "stock": 8
+        "pictureUrl": "../../assets/book-example2.jpg",
+        "stock": 8,
+        "category": "Non-fiction"
     },
     {
         "id": 3,
         "title": "The Song of Achilles",
         "price": 2000,
         "pictureUrl": "../../assets/book-example.jpg",
-        "stock": 8
+        "stock": 8,
+        "category": "Fiction"
     },
     {
         "id": 4,
-        "title": "The Song of Achilles",
+        "title": "One of Us",
         "price": 1500,
-        "pictureUrl": "../../assets/book-example.jpg",
-        "stock": 8
+        "pictureUrl": "../../assets/book-example2.jpg",
+        "stock": 8,
+        "category": "Non-fiction"
     },
     {
         "id": 5,
         "title": "The Song of Achilles",
         "price": 3400,
         "pictureUrl": "../../assets/book-example.jpg",
-        "stock": 8
+        "stock": 8,
+        "category": "Fiction"
+    },
+    {
+        "id": 6,
+        "title": "One of Us",
+        "price": 3600,
+        "pictureUrl": "../../assets/book-example2.jpg",
+        "stock": 8,
+        "category": "Non-fiction"
+    },
+    {
+        "id": 7,
+        "title": "One of Us",
+        "price": 1900,
+        "pictureUrl": "../../assets/book-example2.jpg",
+        "stock": 8,
+        "category": "Non-fiction"
+    },
+    {
+        "id": 8,
+        "title": "The Song of Achilles",
+        "price": 5604,
+        "pictureUrl": "../../assets/book-example.jpg",
+        "stock": 8,
+        "category": "Fiction"
     }
 ]}
