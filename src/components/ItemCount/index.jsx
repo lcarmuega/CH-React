@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './styles.css';
 
-const ItemCount = ({ valorStock }) => {
+const ItemCount = ({ valorStock, onAdd }) => {
     const [quantity, setQuantity] = useState(1);
     const [stock, setStock] = useState(valorStock);
     const [disableMinus, setDisableMinus] = useState(true);
@@ -24,16 +24,18 @@ const ItemCount = ({ valorStock }) => {
         }
     }
 
-    const addToCart = () => {
+    /* const addToCart = (event) => {
+        console.log(event);
         if (quantity <= stock) {
             alert("Se agregaron los productos al carrito");
             setStock(stock - quantity);
             setQuantity(1);
+
         } else {
             alert("No hay stock disponible para agregar los productos al carrito");
             setQuantity(1);
         }
-    }
+    } */
 
     return (
         <>
@@ -43,7 +45,7 @@ const ItemCount = ({ valorStock }) => {
                     <span className="itemQuantity">{quantity}</span>
                     <button className="counterIcon" disabled={disablePlus} style={{ color: "green" }} onClick={addItem}>+</button>
                 </div>
-                <button className="counterButton" onClick={addToCart}>Agregar al carrito</button>
+                <button className="counterButton" onClick={() => onAdd(quantity)}>Agregar al carrito</button>
             </div>
         </>
     )
