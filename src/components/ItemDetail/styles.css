@@ -25,3 +25,17 @@
     font-family: 'Roboto Mono', monospace;
     font-size: medium;
 }
+
+.detailCounter {
+    margin: 20px;
+}
+
+.goToCartButton {
+    user-select: none;
+    background-color: white;
+    font-family: 'Roboto Mono', monospace;
+    margin: 8px;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 3px;
+}
