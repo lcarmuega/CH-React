@@ -24,19 +24,6 @@ const ItemCount = ({ valorStock, onAdd }) => {
         }
     }
 
-    /* const addToCart = (event) => {
-        console.log(event);
-        if (quantity <= stock) {
-            alert("Se agregaron los productos al carrito");
-            setStock(stock - quantity);
-            setQuantity(1);
-
-        } else {
-            alert("No hay stock disponible para agregar los productos al carrito");
-            setQuantity(1);
-        }
-    } */
-
     return (
         <>
             <div className="counterContainer">
