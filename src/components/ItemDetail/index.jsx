@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { Cart } from '../../context/CartProvider';
 import ItemCount from '../ItemCount';
 import './styles.css';
 
@@ -7,9 +8,15 @@ const ItemDetail = ({ product }) => {
     const [buttonFlag, setButtonFlag] = useState(false);
     const [quantity, setQuantity] = useState(0);
 
+    const {addToCart} = useContext(Cart);
+
     const onAdd = (quantity) => {
         setQuantity(quantity);
         setButtonFlag(true);
+    }
+
+    const onFinishPurchase = () => {
+        addToCart(product, quantity);
     }
     
     return (
@@ -22,7 +29,7 @@ const ItemDetail = ({ product }) => {
                     Numquam, voluptatibus minus? Porro illum, itaque numquam consectetur sapiente nisi nihil? Voluptatem aspernatur necessitatibus quia vitae saepe quae sapiente laborum culpa quidem,
                     natus voluptates iste cum officiis molestiae ea incidunt atque sed adipisci delectus perferendis explicabo autem! Incidunt, eius.</p>
                 <div className='detailCounter'>
-                    {(buttonFlag ? <button className='goToCartButton'><Link style={{ textDecoration: 'none' }} to={"/cart"}>Finalizar compra</Link></button> : <ItemCount onAdd={onAdd} valorStock={20} />)}
+                    {(buttonFlag ? <button className='goToCartButton' onClick={() => onFinishPurchase()}>Finalizar compra</button> : <ItemCount onAdd={onAdd} valorStock={20} />)}
                 </div>
             </div>
         </div>
