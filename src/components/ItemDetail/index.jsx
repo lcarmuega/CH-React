@@ -13,9 +13,6 @@ const ItemDetail = ({ product }) => {
     const onAdd = (quantity) => {
         setQuantity(quantity);
         setButtonFlag(true);
-    }
-
-    const onFinishPurchase = () => {
         addToCart(product, quantity);
     }
     
@@ -27,7 +24,7 @@ const ItemDetail = ({ product }) => {
                 <h6 className='productPrice'>${product.price}</h6>
                 <p className='productDescription'>{product.description}</p>
                 <div className='detailCounter'>
-                    {(buttonFlag ? <button className='goToCartButton' onClick={() => onFinishPurchase()}>Finalizar compra</button> : <ItemCount onAdd={onAdd} valorStock={20} />)}
+                    {(buttonFlag ? <Link style={{color: "#E3DFFF"}} to={"/cart"}><button className='goToCartButton'>Navegar al Carrito</button></Link> : <ItemCount onAdd={onAdd} valorStock={product.stock} />)}
                 </div>
             </div>
         </div>

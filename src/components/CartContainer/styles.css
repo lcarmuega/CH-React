@@ -1,0 +1,14 @@
+.cartTotal {
+    margin: 10px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: x-large;
+}
+
+.finishPurchaseButton {
+    user-select: none;
+    background-color: white;
+    font-family: 'Roboto Mono', monospace;
+    padding: 5px;
+    margin: 8px;
+    border-radius: 5px;
+}

@@ -1,0 +1,18 @@
+.cartItem {
+    margin: 10px;
+    padding: 20px;
+    width: 100%;
+    background-color: #e3dfff;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Roboto Mono', monospace;
+    font-size: medium;
+}
+
+.deleteProductButton {
+
+
+}
