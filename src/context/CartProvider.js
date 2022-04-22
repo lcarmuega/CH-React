@@ -34,7 +34,11 @@ const CartProvider = ({ children }) => {
     } */
 
     const removeProductFromCart = (product) => {
-        const cartFiltrado = cart.filter(elemento => elemento.id !== product.id);
+        const quantityToRemove = cart.find(item => item === product).quantity;
+        const totalQuantity = cartQuantity - quantityToRemove;
+        setCartQuantity(totalQuantity);      
+
+        const cartFiltrado = cart.filter(element => element.id !== product.id);
         setCart(cartFiltrado);
     }
 
@@ -53,7 +57,7 @@ const CartProvider = ({ children }) => {
 
     return (
         <Cart.Provider value={{
-            cart, addToCart, calculatePurchaseTotal, cartQuantity
+            cart, addToCart, calculatePurchaseTotal, cartQuantity, removeProductFromCart
         }}>
             {children}
         </Cart.Provider>
