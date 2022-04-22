@@ -26,7 +26,8 @@ const CheckoutModal = ({ hideModal, cart, total }) => {
             items: {
                 cart
             },
-            total: total
+            total: total,
+            dateCreated: new Date().toLocaleDateString()
         }
         console.log(order);
         const orderCollection = collection(db, 'orders');
